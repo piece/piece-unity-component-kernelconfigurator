@@ -73,7 +73,7 @@ $package->setReleaseStability($releaseStability);
 $package->setNotes($notes);
 $package->setPhpDep('4.3.0');
 $package->setPearinstallerDep('1.4.3');
-$package->addPackageDepWithChannel('required', 'Piece_Unity', 'pear.piece-framework.com', '0.13.0');
+$package->addPackageDepWithChannel('required', 'Piece_Unity', 'pear.piece-framework.com', '1.0.0');
 $package->addPackageDepWithChannel('optional', 'PHPUnit', 'pear.phpunit.de', '1.3.2', '1.3.2');
 $package->addPackageDepWithChannel('optional', 'Piece_Right', 'pear.piece-framework.com', '1.5.0');
 $package->addPackageDepWithChannel('optional', 'Cache_Lite', 'pear.php.net', '1.7.0');
