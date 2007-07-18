@@ -37,7 +37,7 @@
  * @deprecated File deprecated in Release 1.0.0
  */
 
-require dirname(__FILE__) . '/../../../prepare.php';
+require_once realpath(dirname(__FILE__) . '/../../../prepare.php');
 require_once 'PHPUnit.php';
 require_once 'Piece/Unity/Plugin/KernelConfigurator.php';
 require_once 'Piece/Unity/Context.php';
