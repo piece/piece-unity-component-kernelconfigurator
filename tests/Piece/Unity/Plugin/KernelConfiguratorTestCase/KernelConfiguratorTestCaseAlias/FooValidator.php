@@ -103,4 +103,3 @@ class KernelConfiguratorTestCaseAlias_FooValidator extends Piece_Right_Validator
  * indent-tabs-mode: nil
  * End:
  */
-?>

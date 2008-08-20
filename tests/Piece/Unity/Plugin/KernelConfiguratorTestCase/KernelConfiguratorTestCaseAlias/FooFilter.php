@@ -101,4 +101,3 @@ class KernelConfiguratorTestCaseAlias_FooFilter
  * indent-tabs-mode: nil
  * End:
  */
-?>

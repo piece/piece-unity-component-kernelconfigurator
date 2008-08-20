@@ -400,4 +400,3 @@ class Piece_Unity_Plugin_KernelConfigurator extends Piece_Unity_Plugin_Common
  * indent-tabs-mode: nil
  * End:
  */
-?>

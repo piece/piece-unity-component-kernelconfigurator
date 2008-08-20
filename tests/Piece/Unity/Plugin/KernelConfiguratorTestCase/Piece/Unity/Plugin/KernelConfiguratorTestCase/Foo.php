@@ -110,4 +110,3 @@ class Piece_Unity_Plugin_KernelConfiguratorTestCase_Foo extends Piece_Unity_Plug
  * indent-tabs-mode: nil
  * End:
  */
-?>

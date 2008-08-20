@@ -66,4 +66,3 @@ class Piece_Unity_Plugin_KernelConfiguratorTestCase_AutoloadClass {}
  * indent-tabs-mode: nil
  * End:
  */
-?>
