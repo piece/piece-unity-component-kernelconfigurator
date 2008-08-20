@@ -4,7 +4,7 @@
 /**
  * PHP versions 4 and 5
  *
- * Copyright (c) 2006-2007 KUBO Atsuhiro <iteman@users.sourceforge.net>,
+ * Copyright (c) 2006-2008 KUBO Atsuhiro <iteman@users.sourceforge.net>,
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,7 +30,7 @@
  *
  * @package    Piece_Unity
  * @subpackage Piece_Unity_Component_KernelConfigurator
- * @copyright  2006-2007 KUBO Atsuhiro <iteman@users.sourceforge.net>
+ * @copyright  2006-2008 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.opensource.org/licenses/bsd-license.php  BSD License (revised)
  * @version    SVN: $Id$
  * @since      File available since Release 1.0.0
@@ -52,7 +52,7 @@ require_once 'Piece/Unity/URL.php';
  *
  * @package    Piece_Unity
  * @subpackage Piece_Unity_Component_KernelConfigurator
- * @copyright  2006-2007 KUBO Atsuhiro <iteman@users.sourceforge.net>
+ * @copyright  2006-2008 KUBO Atsuhiro <iteman@users.sourceforge.net>
  * @license    http://www.opensource.org/licenses/bsd-license.php  BSD License (revised)
  * @version    Release: @package_version@
  * @since      Class available since Release 1.0.0
@@ -145,13 +145,9 @@ class Piece_Unity_Plugin_KernelConfigurator extends Piece_Unity_Plugin_Common
     {
         $pluginPrefixes = $this->_getConfiguration('pluginPrefixes');
         if (!is_array($pluginPrefixes)) {
-            Piece_Unity_Error::pushCallback(create_function('$error', 'return ' . PEAR_ERRORSTACK_PUSHANDLOG . ';'));
-            Piece_Unity_Error::push(PIECE_UNITY_ERROR_INVALID_CONFIGURATION,
-                                    'Failed to configure the configuration point [ pluginPrefixes ] at the plugin [ ' . __CLASS__ . ' ].',
-                                    'warning',
-                                    array('plugin' => __CLASS__)
-                                    );
-            Piece_Unity_Error::popCallback();
+            trigger_error('Failed to configure the configuration point [ pluginPrefixes ] at the plugin [ ' . __CLASS__ . ' ].',
+                          E_USER_WARNING
+                          );
             return;
         }
 
@@ -170,13 +166,9 @@ class Piece_Unity_Plugin_KernelConfigurator extends Piece_Unity_Plugin_Common
     {
         $autoloadClasses = $this->_getConfiguration('autoloadClasses');
         if (!is_array($autoloadClasses)) {
-            Piece_Unity_Error::pushCallback(create_function('$error', 'return ' . PEAR_ERRORSTACK_PUSHANDLOG . ';'));
-            Piece_Unity_Error::push(PIECE_UNITY_ERROR_INVALID_CONFIGURATION,
-                                    'Failed to configure the configuration point [ autoloadClasses ] at the plugin [ ' . __CLASS__ . ' ].',
-                                    'warning',
-                                    array('plugin' => __CLASS__)
-                                    );
-            Piece_Unity_Error::popCallback();
+            trigger_error('Failed to configure the configuration point [ autoloadClasses ] at the plugin [ ' . __CLASS__ . ' ].',
+                          E_USER_WARNING
+                          );
             $autoloadClasses = array();
         }
 
@@ -225,13 +217,9 @@ class Piece_Unity_Plugin_KernelConfigurator extends Piece_Unity_Plugin_Common
     {
         $pluginDirectories = $this->_getConfiguration('pluginDirectories');
         if (!is_array($pluginDirectories)) {
-            Piece_Unity_Error::pushCallback(create_function('$error', 'return ' . PEAR_ERRORSTACK_PUSHANDLOG . ';'));
-            Piece_Unity_Error::push(PIECE_UNITY_ERROR_INVALID_CONFIGURATION,
-                                    'Failed to configure the configuration point [ pluginDirectories ] at the plugin [ ' . __CLASS__ . ' ].',
-                                    'warning',
-                                    array('plugin' => __CLASS__)
-                                    );
-            Piece_Unity_Error::popCallback();
+            trigger_error('Failed to configure the configuration point [ pluginDirectories ] at the plugin [ ' . __CLASS__ . ' ].',
+                          E_USER_WARNING
+                          );
             return;
         }
 
@@ -268,13 +256,9 @@ class Piece_Unity_Plugin_KernelConfigurator extends Piece_Unity_Plugin_Common
     {
         $validatorDirectories = $this->_getConfiguration('validationValidatorDirectories');
         if (!is_array($validatorDirectories)) {
-            Piece_Unity_Error::pushCallback(create_function('$error', 'return ' . PEAR_ERRORSTACK_PUSHANDLOG . ';'));
-            Piece_Unity_Error::push(PIECE_UNITY_ERROR_INVALID_CONFIGURATION,
-                                    'Failed to configure the configuration point [ validationValidatorDirectories ] at the plugin [ ' . __CLASS__ . ' ].',
-                                    'warning',
-                                    array('plugin' => __CLASS__)
-                                    );
-            Piece_Unity_Error::popCallback();
+            trigger_error('Failed to configure the configuration point [ validationValidatorDirectories ] at the plugin [ ' . __CLASS__ . ' ].',
+                          E_USER_WARNING
+                          );
             return;
         }
 
@@ -293,13 +277,9 @@ class Piece_Unity_Plugin_KernelConfigurator extends Piece_Unity_Plugin_Common
     {
         $filterDirectories = $this->_getConfiguration('validationFilterDirectories');
         if (!is_array($filterDirectories)) {
-            Piece_Unity_Error::pushCallback(create_function('$error', 'return ' . PEAR_ERRORSTACK_PUSHANDLOG . ';'));
-            Piece_Unity_Error::push(PIECE_UNITY_ERROR_INVALID_CONFIGURATION,
-                                    'Failed to configure the configuration point [ validationFilterDirectories ] at the plugin [ ' . __CLASS__ . ' ].',
-                                    'warning',
-                                    array('plugin' => __CLASS__)
-                                    );
-            Piece_Unity_Error::popCallback();
+            trigger_error('Failed to configure the configuration point [ validationFilterDirectories ] at the plugin [ ' . __CLASS__ . ' ].',
+                          E_USER_WARNING
+                          );
             return;
         }
 
@@ -318,13 +298,9 @@ class Piece_Unity_Plugin_KernelConfigurator extends Piece_Unity_Plugin_Common
     {
         $nonSSLableServers = $this->_getConfiguration('nonSSLableServers');
         if (!is_array($nonSSLableServers)) {
-            Piece_Unity_Error::pushCallback(create_function('$error', 'return ' . PEAR_ERRORSTACK_PUSHANDLOG . ';'));
-            Piece_Unity_Error::push(PIECE_UNITY_ERROR_INVALID_CONFIGURATION,
-                                    'Failed to configure the configuration point [ nonSSLableServers ] at the plugin [ ' . __CLASS__ . ' ].',
-                                    'warning',
-                                    array('plugin' => __CLASS__)
-                                    );
-            Piece_Unity_Error::popCallback();
+            trigger_error('Failed to configure the configuration point [ nonSSLableServers ] at the plugin [ ' . __CLASS__ . ' ].',
+                          E_USER_WARNING
+                          );
             return;
         }
 
@@ -343,13 +319,9 @@ class Piece_Unity_Plugin_KernelConfigurator extends Piece_Unity_Plugin_Common
     {
         $validatorPrefixes = $this->_getConfiguration('validationValidatorPrefixes');
         if (!is_array($validatorPrefixes)) {
-            Piece_Unity_Error::pushCallback(create_function('$error', 'return ' . PEAR_ERRORSTACK_PUSHANDLOG . ';'));
-            Piece_Unity_Error::push(PIECE_UNITY_ERROR_INVALID_CONFIGURATION,
-                                    'Failed to configure the configuration point [ validationValidatorPrefixes ] at the plugin [ ' . __CLASS__ . ' ].',
-                                    'warning',
-                                    array('plugin' => __CLASS__)
-                                    );
-            Piece_Unity_Error::popCallback();
+            trigger_error('Failed to configure the configuration point [ validationValidatorPrefixes ] at the plugin [ ' . __CLASS__ . ' ].',
+                          E_USER_WARNING
+                          );
             return;
         }
 
@@ -368,13 +340,9 @@ class Piece_Unity_Plugin_KernelConfigurator extends Piece_Unity_Plugin_Common
     {
         $filterPrefixes = $this->_getConfiguration('validationFilterPrefixes');
         if (!is_array($filterPrefixes)) {
-            Piece_Unity_Error::pushCallback(create_function('$error', 'return ' . PEAR_ERRORSTACK_PUSHANDLOG . ';'));
-            Piece_Unity_Error::push(PIECE_UNITY_ERROR_INVALID_CONFIGURATION,
-                                    'Failed to configure the configuration point [ validationFilterPrefixes ] at the plugin [ ' . __CLASS__ . ' ].',
-                                    'warning',
-                                    array('plugin' => __CLASS__)
-                                    );
-            Piece_Unity_Error::popCallback();
+            trigger_error('Failed to configure the configuration point [ validationFilterPrefixes ] at the plugin [ ' . __CLASS__ . ' ].',
+                          E_USER_WARNING
+                          );
             return;
         }
 
