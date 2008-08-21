@@ -214,7 +214,6 @@ class Piece_Unity_Plugin_KernelConfiguratorTestCase extends PHPUnit_TestCase
 
         $this->assertTrue(array_key_exists('baz', $fooPlugin));
 
-        Piece_Unity_Plugin_Factory::clearInstances();
         $GLOBALS['PIECE_UNITY_Plugin_Directories'] = $oldPluginDirectories;
     }
 
@@ -316,7 +315,6 @@ class Piece_Unity_Plugin_KernelConfiguratorTestCase extends PHPUnit_TestCase
         $this->assertTrue(is_object($foo));
         $this->assertTrue(is_a($foo, 'KernelConfiguratorTestCaseAlias_FooPlugin'));
 
-        Piece_Unity_Plugin_Factory::clearInstances();
         $GLOBALS['PIECE_UNITY_Plugin_Directories'] = $oldPluginDirectories;
         $GLOBALS['PIECE_UNITY_Plugin_Prefixes'] = $oldPluginPrefixes;
     }
